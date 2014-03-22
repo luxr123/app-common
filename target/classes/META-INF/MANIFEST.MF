@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: common
-Implementation-Version: 1.0-SNAPSHOT
-Implementation-Vendor-Id: com.dream.common.app
-Build-Jdk: 1.7.0_51
-Built-By: luxury
-Created-By: Maven Integration for Eclipse
-

@@ -57,8 +57,11 @@ public class User extends BaseEntity<Long> {
 	@Transient
 	private String guid;
 	
+	
+	
 	@Column(columnDefinition="text")
 	private String iconPath;
+	
 	
 	@Column(name = "gender")
 	@Enumerated(EnumType.STRING)
@@ -155,7 +158,7 @@ public class User extends BaseEntity<Long> {
 	public void setUpdatetime(Date updatetime) {
 		this.updatetime = updatetime;
 	}
-	
+
 	public Gender getGender() {
 		return gender;
 	}
@@ -173,27 +176,31 @@ public class User extends BaseEntity<Long> {
 		this.iconPath = iconPath;
 	}
 	
-	public String getUdid() {
-		return udid;
-	}
+  public String getUdid() {
+    return udid;
+  }
 
-	public void setUdid(String udid) {
-		this.udid = udid;
-	}
+  
+  public void setUdid(String udid) {
+    this.udid = udid;
+  }
 
-	public String getTags() {
-		return tags;
-	}
+  
+  public String getTags() {
+    return tags;
+  }
 
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
+  
+  public void setTags(String tags) {
+    this.tags = tags;
+  }
+  
 
-	@Override
+  @Override
 	public String toString() {
 		return "User [name=" + name + ", password=" + password + ", role=" + role + ", checkcode=" + checkcode + ", guid=" + guid
-				+ ", iconPath=" + iconPath + ", gender=" + gender + ", salt=" + salt + ", createtime=" + createtime + ", updatetime="
-				+ updatetime + "]";
+				+  ", gender=" + gender + ", salt=" + salt + ", createtime=" + createtime + ", updatetime="
+				+ updatetime + ", udid=" + udid +", tags=" + tags+ "]";
 	}
 
 	public static void main(String[] args) {

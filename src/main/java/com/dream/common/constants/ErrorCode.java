@@ -17,9 +17,9 @@ public class ErrorCode {
 		map.put(CODE_SUCCESS, "执行成功");
 	}
 
-	public static String CODE_FAILED = "0001";
+	public static String CODE_FAIL = "0001";
 	static {
-		map.put(CODE_FAILED, "执行失败");
+		map.put(CODE_FAIL, "执行失败");
 	}
 
 	public static String CODE_FILE_NOT_EXIST = "0002";
@@ -44,9 +44,7 @@ public class ErrorCode {
 
 	// 特定的几个错误对象
 	public static ErrorCode SUCCESS = new ErrorCode(CODE_SUCCESS);
-	
-	public static ErrorCode FAILED = new ErrorCode(CODE_FAILED);
-	
+	public static ErrorCode FAIL = new ErrorCode(CODE_FAIL);
 	public static ErrorCode NOT_EXIT = new ErrorCode(CODE_FILE_NOT_EXIST );
 
 	// 两个属性
@@ -99,8 +97,8 @@ public class ErrorCode {
 	}
 
 	public static void main(String[] args) {
-		ErrorCode errorCode = ErrorCode.SUCCESS;
-		errorCode.setMsg("ok");
+		ErrorCode errorCode = new ErrorCode("0000");
 		System.out.println(errorCode);
+		System.out.println(ErrorCode.SUCCESS);
 	}
 }
