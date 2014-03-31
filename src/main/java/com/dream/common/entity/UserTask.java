@@ -40,7 +40,19 @@ public class UserTask extends BaseEntity<Long> {
   
 //不需要持久到DB的属性使用该注解
   @Transient
-   private int count;  //成功领取该任务人数
+   private int successcount;  //成功领取该任务人数
+  
+//不需要持久到DB的属性使用该注解
+  @Transient
+   private int waitcount;  //等待领取该任务人数
+  
+//不需要持久到DB的属性使用该注解
+  @Transient
+   private String createusername;  //发布该任务的用户名
+  
+//不需要持久到DB的属性使用该注解
+  @Transient
+   private String userIcon;  //发布该任务的用户头像路径
 
   public String getContent() {
     return content;
@@ -97,14 +109,45 @@ public class UserTask extends BaseEntity<Long> {
   public void setStatus(int status) {
     this.status = status;
   }
-  
-  public int getCount() {
-    return count;
+
+  public int getSuccesscount() {
+    return successcount;
   }
 
   
-  public void setCount(int count) {
-    this.count = count;
+  public void setSuccesscount(int successcount) {
+    this.successcount = successcount;
   }
+
+  
+  public int getWaitcount() {
+    return waitcount;
+  }
+
+  
+  public void setWaitcount(int waitcount) {
+    this.waitcount = waitcount;
+  }
+
+  
+  public String getCreateusername() {
+    return createusername;
+  }
+
+  
+  public void setCreateusername(String createusername) {
+    this.createusername = createusername;
+  }
+
+  
+  public String getUserIcon() {
+    return userIcon;
+  }
+
+  
+  public void setUserIcon(String userIcon) {
+    this.userIcon = userIcon;
+  }
+
 
 }
