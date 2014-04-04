@@ -11,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -19,9 +20,14 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "user")
-public class User extends BaseEntity<Long> {
+public class User extends BaseEntity<Long> implements Serializable{
 
-	public static final String NAME_PATTERN = "^[\\u4E00-\\u9FA5\\uf900-\\ufa2d_a-zA-Z][\\u4E00-\\u9FA5\\uf900-\\ufa2d\\w]{1,19}$";
+	/**
+   * 
+   */
+  private static final long serialVersionUID = 4032635228861446327L;
+  
+  public static final String NAME_PATTERN = "^[\\u4E00-\\u9FA5\\uf900-\\ufa2d_a-zA-Z][\\u4E00-\\u9FA5\\uf900-\\ufa2d\\w]{1,19}$";
 	public static final int USERNAME_MIN_LENGTH = 2;
     public static final int USERNAME_MAX_LENGTH = 20;
 	public static final int PASSWORD_MIN_LENGTH = 5;

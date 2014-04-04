@@ -14,8 +14,12 @@ import javax.persistence.MappedSuperclass;
  * Date: 2013年12月13日 下午8:03:02
  */
 @MappedSuperclass
-public abstract class BaseEntity<ID extends Serializable> extends AbstractEntity<ID> {
+public abstract class BaseEntity<ID extends Serializable> extends AbstractEntity<ID> implements Serializable{
 
+    /**
+   * 
+   */
+  private static final long serialVersionUID = -4176801952399417663L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private ID id;

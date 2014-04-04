@@ -1,6 +1,8 @@
 package com.dream.common.entity;
 
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -13,7 +15,16 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 @Entity
 @Table(name = "task")
-public class UserTask extends BaseEntity<Long> {
+public class UserTask extends BaseEntity<Long> implements Serializable{
+
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 8677807676848873618L;
+
+  /**
+   * 
+   */
 
   @Column(name = "content")
   private String content; // 任务内容
